@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-06-16 Wed 15:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="zzy" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8f11776">1. <span class="done DONE">DONE</span> 一.滴滴(增长方向)</a>
+<ul>
+<li><a href="#orgdf7e7b9">1.1. 数据库大小，分表，雪花分片算法、生成机制</a></li>
+<li><a href="#org61138e9">1.2. 锁，可重入锁、redis锁</a></li>
+<li><a href="#org80d12db">1.3. concurrenthashmap</a></li>
+<li><a href="#org63fad13">1.4. synchronized</a></li>
+<li><a href="#orge7628b5">1.5. 红黑树</a></li>
+<li><a href="#orgd350cc2">1.6. b+树</a></li>
+<li><a href="#orge3a16f3">1.7. hbase中的lsm-tree</a>
+<ul>
+<li><a href="#org6ea0e4e">1.7.1. log-structured-merge(日志结构合并树)</a></li>
+<li><a href="#org56eb85d">1.7.2. c0使用跳表实现</a></li>
+<li><a href="#org32a20f5">1.7.3. 多层树结构</a></li>
+<li><a href="#org6ec3788">1.7.4. wal（write-ahead-log）</a></li>
+<li><a href="#org26ea09a">1.7.5. 读时需要合并内存中读数据，故而会比较慢，但是写时可以实现顺序写，速度快</a></li>
+<li><a href="#org86271f8">1.7.6. LSM树的核心特点是利用顺序写来提高写性能</a></li>
+<li><a href="#orga5f281e">1.7.7. LSM树有以下三个重要组成部分： MemTable、Immutable MemTable、SSTable(Sorted String Table)</a></li>
+<li><a href="#org8f3c63d">1.7.8. 在Compact策略上，主要介绍两种基本策略：size-tiered和leveled。</a></li>
+<li><a href="#org6aaee6b">1.7.9. 数据会先写入内存中的C0树，当它的大小达到一定阈值之后，C0树中的全部或部分数据就会刷入磁盘中的C1树</a></li>
+<li><a href="#orgdf7764d">1.7.10. 随机读写使用bloomfilter来加快速度，bloom-index-block</a></li>
+<li><a href="#org088aa3b">1.7.11. HFile就是LSM树中的高层实现。从逻辑上来讲，它是一棵满的3层B+树，从上到下的3层索引分别是Root index block、Intermediate index block和Leaf index block，对应到下面的Data block就是HFile的KeyValue结构了</a></li>
+<li><a href="#org572ad71">1.7.12. 读放大、写放大、空间放大</a></li>
+</ul>
+</li>
+<li><a href="#org7ce2a96">1.8. mysql中redo log和undo log区别</a>
+<ul>
+<li><a href="#orgc1abf1a">1.8.1. redo log(wal [write after log] checkp point、write pos、物理格式日志、prepare和commit完成，两端式提交，事务提交前刷到硬盘上)</a></li>
+<li><a href="#orge67152a">1.8.2. undo log(逻辑格式日志)</a></li>
+<li><a href="#orgd1c17a7">1.8.3. binlog(逻辑格式的日志，事务提交后刷到硬盘上)</a></li>
+</ul>
+</li>
+<li><a href="#orgdb8d0ea">1.9. hystric实现滑动窗口</a></li>
+</ul>
+</li>
+<li><a href="#orgb877a92">2. <span class="done DONE">DONE</span> 二、涂鸦(智能场景)</a>
+<ul>
+<li><a href="#orgb62cc3d">2.1. 05-17</a></li>
+<li><a href="#orgccb4d5c">2.2. https://app.mokahr.com/video_interview?pw=033066250</a></li>
+<li><a href="#orgaf5c5a0">2.3. 项目</a></li>
+<li><a href="#org25ced77">2.4. jvm内存</a></li>
+<li><a href="#org1d43d75">2.5. redis热键</a></li>
+<li><a href="#org757bc1c">2.6. mysql事务、回退、mvcc、undolog</a></li>
+<li><a href="#org86ca558">2.7. mysql的简单使用 group by + having的使用场景</a></li>
+<li><a href="#orgd86a96e">2.8. spring orm</a></li>
+<li><a href="#org9f72dd2">2.9. 缓存穿透</a></li>
+</ul>
+</li>
+<li><a href="#orgd23a4ae">3. <span class="done DONE">DONE</span> 三、北大信研院(数据处理中台)</a>
+<ul>
+<li><a href="#orgfd2b698">3.1. 05-17</a></li>
+<li><a href="#org01479fd">3.2. java缺点</a></li>
+<li><a href="#orgfc48759">3.3. mysql索引</a></li>
+<li><a href="#org7f1e902">3.4. mysql记录所有增删该</a></li>
+<li><a href="#org4382e77">3.5. aop实现原理 动态代理</a></li>
+<li><a href="#org0879e4c">3.6. 容器</a></li>
+<li><a href="#orgfa506f5">3.7. redis key过期机制</a></li>
+<li><a href="#org17a5d07">3.8. jvm优化</a></li>
+</ul>
+</li>
+<li><a href="#orgd0aa2c3">4. <span class="done DONE">DONE</span> 四、网易(低代码开发方向)</a>
+<ul>
+<li><a href="#org4a64038">4.1. 05-18</a></li>
+<li><a href="#org93a75ef">4.2. 7:00</a></li>
+<li><a href="#org3219b09">4.3. lamdba实现原理+函数式编程(动态生成内部类)</a></li>
+<li><a href="#orgb6e8d29">4.4. 项目</a></li>
+<li><a href="#orgeb81109">4.5. 熔断</a></li>
+<li><a href="#orgbcd3fb9">4.6. 设计模式(工厂模式)</a>
+<ul>
+<li><a href="#org22956c1">4.6.1. 封装对象实例过程</a></li>
+</ul>
+</li>
+<li><a href="#orgbc492c4">4.7. concurrenthashmap，key是否可以为null</a></li>
+<li><a href="#org597aed1">4.8. 类的编译过程</a></li>
+<li><a href="#org8ad76ac">4.9. sharding-jdbc使用中的问题</a>
+<ul>
+<li><a href="#orgbe6f698">4.9.1. 事务（本地事务、两阶段事务、柔性事务[最大努力推送]）</a></li>
+<li><a href="#orge4c5978">4.9.2. or、union、id这些不能用</a></li>
+</ul>
+</li>
+<li><a href="#orgfd446e6">4.10. byte-tcc原理</a></li>
+</ul>
+</li>
+<li><a href="#org5635dd5">5. <span class="done DONE">DONE</span> 五、有赞(有赞云、教育、零售)</a>
+<ul>
+<li><a href="#org917aaee">5.1. 05-18</a></li>
+<li><a href="#org58c4980">5.2. 8:00</a></li>
+<li><a href="#org5b71744">5.3. zset的结构：跳表 ziplist</a></li>
+<li><a href="#org32e96a7">5.4. set结构：hashtable inset</a></li>
+<li><a href="#orgc64043a">5.5. hash：ziplist hashtable</a></li>
+<li><a href="#org7d59d93">5.6. aof和rdb发生时机</a>
+<ul>
+<li><a href="#orgcd5fd86">5.6.1. aof先放入内存缓存中，当everysec、always、no(由系统判断)</a></li>
+<li><a href="#orgfc4acc9">5.6.2. rdb: 主从同步、设置的时间规则、flushall、shutdown</a></li>
+</ul>
+</li>
+<li><a href="#org64a3707">5.7. redis锁在执行过程中过期问题</a>
+<ul>
+<li><a href="#org5b471f1">5.7.1. 使用watch dog进行监控，当客户端没有挂掉就续期</a></li>
+</ul>
+</li>
+<li><a href="#orgf9252f7">5.8. 红黑树与跳表对比</a></li>
+<li><a href="#orgb5a262d">5.9. http4次挥手，close<sub>wait过多问题</sub></a>
+<ul>
+<li><a href="#org061d61a">5.9.1. 用户大量断开，同时服务端keep-alive设置过长</a></li>
+</ul>
+</li>
+<li><a href="#orgc1f6b2d">5.10. 读写锁(为什么高位是读，低位是写)</a>
+<ul>
+<li><a href="#org3a8fe4f">5.10.1. 当要写入时，只需判断是否是0</a></li>
+</ul>
+</li>
+<li><a href="#orgf18485c">5.11. mysql中的redolog、undolog、binlog</a>
+<ul>
+<li><a href="#org2aa1614">5.11.1. redolog写入时间：事务开始后陆续写入缓冲区、在事务提交时刷入磁盘(innodb-flush-log-at-trx-commit参数)</a></li>
+<li><a href="#org9892f19">5.11.2. binlog:(sync-binlog参数)事务提交前</a></li>
+<li><a href="#orgf91f455">5.11.3. 数据不一致问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4e41655">6. <span class="done DONE">DONE</span> 六、同花顺</a>
+<ul>
+<li><a href="#orgfe469e1">6.1. 1面</a>
+<ul>
+<li><a href="#org4d94138">6.1.1. 05-19</a></li>
+<li><a href="#orgc3934e1">6.1.2. 19:00</a></li>
+<li><a href="#org9eaddf5">6.1.3. 秒杀系统</a></li>
+<li><a href="#org7cfc75c">6.1.4. redis深入</a></li>
+<li><a href="#orgcfbe0fd">6.1.5. 熔断(线程隔离、信号量隔离)</a></li>
+<li><a href="#org0b9ccd6">6.1.6. cpu飙高如何查看</a></li>
+<li><a href="#orgf224340">6.1.7. rabbitmq如何实现幂等、修改数据问题</a></li>
+<li><a href="#orgb8cf5f4">6.1.8. netty(原理、心跳、多节点部署时如何判断是哪台机器上的连接)</a></li>
+<li><a href="#org9799194">6.1.9. 算法题(数组合并)</a></li>
+</ul>
+</li>
+<li><a href="#org92aabb2">6.2. 2面</a>
+<ul>
+<li><a href="#org098b016">6.2.1. 05-22</a></li>
+<li><a href="#orgac53e80">6.2.2. 09:30</a></li>
+<li><a href="#org1258232">6.2.3. aop</a></li>
+<li><a href="#org71542b2">6.2.4. mybatis的使用，连接池大小设置20</a></li>
+<li><a href="#org94801d0">6.2.5. 最近学习的内容&#x2013;林奇的数据库 连接池的作用</a></li>
+</ul>
+</li>
+<li><a href="#org8680f45">6.3. 3面</a>
+<ul>
+<li><a href="#orgcc3ac3b">6.3.1. 05-22</a></li>
+<li><a href="#orgad2cb98">6.3.2. 19:00</a></li>
+<li><a href="#orgcd13e65">6.3.3. hr面</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc47cec4">7. <span class="done DONE">DONE</span> 七、阿里巴巴</a>
+<ul>
+<li><a href="#orgce2f06d">7.1. 一面</a>
+<ul>
+<li><a href="#orgd70591e">7.1.1. 05-25</a></li>
+<li><a href="#orgfc1ebc0">7.1.2. 21:00</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0a8e6f6">8. <span class="done DONE">DONE</span> 九、云集</a>
+<ul>
+<li><a href="#orga74a9c0">8.1. 一面</a>
+<ul>
+<li><a href="#orge0a31fa">8.1.1. 05月31日10:30</a></li>
+<li><a href="#org3753f13">8.1.2. sharding-jdbc 分表的id选择、查找指定id、分页</a></li>
+<li><a href="#org35ad29d">8.1.3. redis的数据结构、集群如何查找、hash如何复制、代码中如何写</a></li>
+<li><a href="#org0274f5a">8.1.4. mysql 中的回表</a></li>
+<li><a href="#org4767947">8.1.5. springboot的aop</a></li>
+<li><a href="#org0c01b72">8.1.6. 低代码项目问题</a></li>
+<li><a href="#org7063957">8.1.7. rabbitmq选择原因</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgac2f7c7">9. <span class="done DONE">DONE</span> 婚礼纪(2021-06-01 14:00)</a>
+<ul>
+<li><a href="#org0755e18">9.1. 一面</a>
+<ul>
+<li><a href="#org5ee75a4">9.1.1. 面试时间：2021-05-27 19:00 GMT+08:00​</a></li>
+<li><a href="#org42df3e3">9.1.2. 项目介绍、秒杀系统的场景、缓存+消息队列异步</a></li>
+<li><a href="#org031a944">9.1.3. mysql优化、索引、事务、redo、undo、binlog</a></li>
+<li><a href="#org3540f0f">9.1.4. redis、为什么快、rdb和aof、rdb的过程</a></li>
+<li><a href="#org341c93f">9.1.5. jvm内存模型、内存逃逸：原因</a></li>
+<li><a href="#org15fdbc9">9.1.6. go的协程</a></li>
+</ul>
+</li>
+<li><a href="#org7905a0c">9.2. 二面</a>
+<ul>
+<li><a href="#orgca154d8">9.2.1. 2021-06-01 14:00</a></li>
+<li><a href="#orgf9bc6af">9.2.2. hrbp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga652a3c">10. <span class="done DONE">DONE</span> 有赞(2021-06-01 15:00)</a>
+<ul>
+<li><a href="#org34195a9">10.1. 一面</a>
+<ul>
+<li><a href="#orge9fd0bf">10.1.1. 面试日期：06月01日</a></li>
+<li><a href="#orgd8200cd">10.1.2. 项目做了什么</a></li>
+<li><a href="#org5020de8">10.1.3. sharding-jdbc的id问题、生成器的高可用</a></li>
+<li><a href="#orga443983">10.1.4. mysql中的事务、锁</a></li>
+<li><a href="#org73a1468">10.1.5. jvm回收、不同代、参数类型</a></li>
+<li><a href="#orgd8a6891">10.1.6. java动态代理</a></li>
+<li><a href="#org267cef3">10.1.7. 反射的原理</a></li>
+<li><a href="#org985c7f0">10.1.8. concurrenthashmap</a></li>
+<li><a href="#orgefa8358">10.1.9. 线程池参数</a></li>
+<li><a href="#org5ad7f23">10.1.10. nio、aio、bio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org29769da">11. <span class="done DONE">DONE</span> 恒生电子(2021/06/02 14:00)</a>
+<ul>
+<li><a href="#orgf83983c">11.1. 一面</a>
+<ul>
+<li><a href="#org048fc7e">11.1.1. HR兰燕 邀请您参加腾讯会议</a></li>
+<li><a href="#org7dfc6b7">11.1.2. 车主服务介绍</a></li>
+<li><a href="#orgf1136f7">11.1.3. jvm内存监控</a></li>
+<li><a href="#org34e3b2a">11.1.4. docker命令</a></li>
+<li><a href="#org8049863">11.1.5. jdk1.8新特性</a></li>
+<li><a href="#org52e342f">11.1.6. 源码阅读</a></li>
+<li><a href="#org3def02c">11.1.7. 团队管理</a></li>
+<li><a href="#orgea9d545">11.1.8. 动态规划介绍</a></li>
+<li><a href="#orgfc8bbcb">11.1.9. 最新学了什么</a></li>
+<li><a href="#org8660ef4">11.1.10. 有写过专利吗</a></li>
+<li><a href="#org39657bf">11.1.11. 论文有吗</a></li>
+<li><a href="#orgf7e086c">11.1.12. 英语怎么样</a></li>
+<li><a href="#orgfac4d95">11.1.13. 是否能出差</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9a6a596">12. <span class="done DONE">DONE</span> hello出行(2021/06/03 16:00)</a>
+<ul>
+<li><a href="#org70fe710">12.1. 一面</a>
+<ul>
+<li><a href="#org8881a7f">12.1.1. jmm模型</a></li>
+<li><a href="#org653066b">12.1.2. juc使用、多线程</a></li>
+<li><a href="#org9972996">12.1.3. aqs是什么，state怎么修改</a></li>
+<li><a href="#orgddfeff7">12.1.4. threadlocal使用</a></li>
+<li><a href="#orga8eb962">12.1.5. 服务治理怎么设计</a></li>
+<li><a href="#orgaf1c8f7">12.1.6. rpc怎么设计</a></li>
+<li><a href="#org8e83cd0">12.1.7. mysql隔离级别、原理是什么、如何在rr下避免幻读、索引类型、聚类索引、默认隔离级别</a></li>
+<li><a href="#org535890d">12.1.8. 如何实现mq的顺序消费</a></li>
+<li><a href="#org0f47fbd">12.1.9. redis的缓存击穿如何处理、使用bloomfilter如何实现、是否使用白名单</a></li>
+<li><a href="#org31625ff">12.1.10. 账号A给账号B转账100，伪代码实现</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org70b25a1">13. <span class="done DONE">DONE</span> 字节(2021-06-07 16:00)</a>
+<ul>
+<li><a href="#orgbcb8a5a">13.1. 一面</a>
+<ul>
+<li><a href="#org3af1c96">13.1.1. 面试形式：视频面试​</a></li>
+<li><a href="#org05ea26d">13.1.2. 乐观锁和悲观锁有哪些，区别是什么，cas的缺陷</a></li>
+<li><a href="#orgdd9e615">13.1.3. 项目介绍，项目中出现的问题(下级访问出问题、Gc频繁、内存溢出、redis gc时卡顿)</a></li>
+<li><a href="#org7cdf785">13.1.4. 对象生成到哪里，栈中、tlab、老年代、jmm、内存逃逸</a></li>
+<li><a href="#org57d6f27">13.1.5. younggc和fullgc中是否有stw</a></li>
+<li><a href="#orgb174b1d">13.1.6. 线程池的使用，设置多少个数量合适</a></li>
+<li><a href="#org71c0053">13.1.7. cpu 100%如何查看</a></li>
+<li><a href="#orge9d7f2c">13.1.8. 内存过高如何查看</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org871d16a">14. <span class="done DONE">DONE</span> 滴滴出行(2021-06-08 15:00)</a>
+<ul>
+<li><a href="#orga3d84c0">14.1. 一面</a>
+<ul>
+<li><a href="#org5107ea2">14.1.1. 前往参加滴滴货运-JAVA高级/资深研发工程师职位的视频面试，面试链接：https://z.didi.cn/vANs8Ys，</a></li>
+<li><a href="#org2018f5e">14.1.2. 齐车大圣项目流程</a></li>
+<li><a href="#orgc289ff0">14.1.3. 整体架构</a></li>
+<li><a href="#org6634e38">14.1.4. 降级操作</a></li>
+<li><a href="#org19e1b60">14.1.5. 线程池&#x2014;内存溢出、jvm查看、cms</a></li>
+<li><a href="#org4f5589c">14.1.6. 分表&#x2014;如何分表、以哪个为主键、用userid如何查询</a></li>
+<li><a href="#org13e48fe">14.1.7. springcloud如何调用&#x2014;eureka、feign、ribbion、rpc原理</a></li>
+</ul>
+</li>
+<li><a href="#org3e6c2ba">14.2. 二面</a>
+<ul>
+<li><a href="#org6b32f9d">14.2.1. 【滴滴出行】 朱赵元同学，您好！ 现邀请你于2021-06-04 14:00，前往参加滴滴货运-JAVA高级/资深研发工程师职位的视频面试，</a></li>
+<li><a href="#org20a9e4d">14.2.2. 项目</a></li>
+<li><a href="#org9c1ef27">14.2.3. jvm 内存溢出查看方法 cms G1 吞吐量优先的prallel-old  jmm和volatile关系</a></li>
+<li><a href="#orge96dae8">14.2.4. cpu 100%查看 us sy干嘛用的</a></li>
+<li><a href="#org59be660">14.2.5. mysql 删除重复telephone</a></li>
+<li><a href="#orgd77302a">14.2.6. 大数查重</a></li>
+<li><a href="#orgc1fcc3d">14.2.7. redis的缓存淘汰</a></li>
+<li><a href="#org140bac3">14.2.8. 大量用户查订单数量</a></li>
+<li><a href="#org3e994aa">14.2.9. 快排</a></li>
+<li><a href="#orge1e4e94">14.2.10. 动态规划</a></li>
+<li><a href="#org0d14005">14.2.11. volatile内存屏障、happen-before</a></li>
+</ul>
+</li>
+<li><a href="#org53aaa53">14.3. 三面</a>
+<ul>
+<li><a href="#orgb6f745b">14.3.1. 【滴滴出行】</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2a36e34">15. 网易(2021-06-11 19:00)</a>
+<ul>
+<li><a href="#orgeb7c99d">15.1. 一面</a>
+<ul>
+<li><a href="#org6ee80e0">15.1.1. 1. 面试职位 - 云信-资深Java服务端研发工程师</a></li>
+<li><a href="#org1efc05a">15.1.2. 项目-违章查询-遇到的问题-一致性问题</a></li>
+<li><a href="#org98addae">15.1.3. tcc实现</a></li>
+<li><a href="#orgfdfcacd">15.1.4. redis缓存-多级缓存</a></li>
+<li><a href="#orgeb79e4a">15.1.5. feign的实现</a></li>
+<li><a href="#org97fd94e">15.1.6. eurake实现</a></li>
+<li><a href="#org6732833">15.1.7. hystrix实现</a></li>
+<li><a href="#org1dbb77c">15.1.8. http请求过程</a></li>
+<li><a href="#orge5a3e61">15.1.9. 多线程并发</a></li>
+</ul>
+</li>
+<li><a href="#org1890f53">15.2. 二面</a>
+<ul>
+<li><a href="#org22f3de9">15.2.1. 1. 面试职位：云信-资深Java服务端研发工程师</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4a6e1e5">16. 得物(2021-06-09 21:00)</a>
+<ul>
+<li><a href="#org290b589">16.1. 一面</a>
+<ul>
+<li><a href="#org5415fbe">16.1.1. 面试日期：06月04日</a></li>
+<li><a href="#orgcc63258">16.1.2. 齐车大圣项目</a></li>
+<li><a href="#orgdea328a">16.1.3. Lru算法实现</a></li>
+<li><a href="#orgbb182f2">16.1.4. jvm中的新生代老年代、以及新生代的回收机制、老年代的回收机制、cms的作用+serial old</a></li>
+<li><a href="#org2e69ff4">16.1.5. 秒杀系统</a></li>
+<li><a href="#org7343819">16.1.6. 如何判断流量</a></li>
+<li><a href="#org63062aa">16.1.7. rabbitmq的消费确认，幂等</a></li>
+<li><a href="#org261de48">16.1.8. 熔断如何处理、限流如何做</a></li>
+<li><a href="#orgcac5577">16.1.9. 双11这种场景如何架构</a></li>
+<li><a href="#org05984ee">16.1.10. mysql中的默认隔离级别rr，以及mvcc的作用，如何避免幻读</a></li>
+<li><a href="#org7dc5371">16.1.11. spring中的ioc理解，postprocessor的使用</a></li>
+<li><a href="#org0810fd5">16.1.12. bean的生命周期</a></li>
+</ul>
+</li>
+<li><a href="#org03c4205">16.2. 二面</a>
+<ul>
+<li><a href="#orge79e7c3">16.2.1. 项目-车主服务</a></li>
+<li><a href="#org4f66eb6">16.2.2. 工业低代码-分表算法</a></li>
+<li><a href="#orgd0c5f2e">16.2.3. 链路跟踪</a></li>
+<li><a href="#orge1c4066">16.2.4. 注册中心实现</a></li>
+<li><a href="#orgd05f21b">16.2.5. hystric实现</a></li>
+<li><a href="#org1ef5d1e">16.2.6. jvm调优及场景</a></li>
+<li><a href="#org567eecb">16.2.7. sharding-jdbc的实现</a></li>
+<li><a href="#org3bd6050">16.2.8. postprocessor使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8f11776" class="outline-2">
+<h2 id="org8f11776"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> 一.滴滴(增长方向)</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgdf7e7b9" class="outline-3">
+<h3 id="orgdf7e7b9"><span class="section-number-3">1.1</span> 数据库大小，分表，雪花分片算法、生成机制</h3>
+</div>
+<div id="outline-container-org61138e9" class="outline-3">
+<h3 id="org61138e9"><span class="section-number-3">1.2</span> 锁，可重入锁、redis锁</h3>
+</div>
+<div id="outline-container-org80d12db" class="outline-3">
+<h3 id="org80d12db"><span class="section-number-3">1.3</span> concurrenthashmap</h3>
+</div>
+<div id="outline-container-org63fad13" class="outline-3">
+<h3 id="org63fad13"><span class="section-number-3">1.4</span> synchronized</h3>
+</div>
+<div id="outline-container-orge7628b5" class="outline-3">
+<h3 id="orge7628b5"><span class="section-number-3">1.5</span> 红黑树</h3>
+</div>
+<div id="outline-container-orgd350cc2" class="outline-3">
+<h3 id="orgd350cc2"><span class="section-number-3">1.6</span> b+树</h3>
+</div>
+<div id="outline-container-orge3a16f3" class="outline-3">
+<h3 id="orge3a16f3"><span class="section-number-3">1.7</span> hbase中的lsm-tree</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org6ea0e4e" class="outline-4">
+<h4 id="org6ea0e4e"><span class="section-number-4">1.7.1</span> log-structured-merge(日志结构合并树)</h4>
+</div>
+<div id="outline-container-org56eb85d" class="outline-4">
+<h4 id="org56eb85d"><span class="section-number-4">1.7.2</span> c0使用跳表实现</h4>
+</div>
+<div id="outline-container-org32a20f5" class="outline-4">
+<h4 id="org32a20f5"><span class="section-number-4">1.7.3</span> 多层树结构</h4>
+</div>
+<div id="outline-container-org6ec3788" class="outline-4">
+<h4 id="org6ec3788"><span class="section-number-4">1.7.4</span> wal（write-ahead-log）</h4>
+</div>
+<div id="outline-container-org26ea09a" class="outline-4">
+<h4 id="org26ea09a"><span class="section-number-4">1.7.5</span> 读时需要合并内存中读数据，故而会比较慢，但是写时可以实现顺序写，速度快</h4>
+</div>
+<div id="outline-container-org86271f8" class="outline-4">
+<h4 id="org86271f8"><span class="section-number-4">1.7.6</span> LSM树的核心特点是利用顺序写来提高写性能</h4>
+</div>
+<div id="outline-container-orga5f281e" class="outline-4">
+<h4 id="orga5f281e"><span class="section-number-4">1.7.7</span> LSM树有以下三个重要组成部分： MemTable、Immutable MemTable、SSTable(Sorted String Table)</h4>
+</div>
+<div id="outline-container-org8f3c63d" class="outline-4">
+<h4 id="org8f3c63d"><span class="section-number-4">1.7.8</span> 在Compact策略上，主要介绍两种基本策略：size-tiered和leveled。</h4>
+</div>
+<div id="outline-container-org6aaee6b" class="outline-4">
+<h4 id="org6aaee6b"><span class="section-number-4">1.7.9</span> 数据会先写入内存中的C0树，当它的大小达到一定阈值之后，C0树中的全部或部分数据就会刷入磁盘中的C1树</h4>
+</div>
+<div id="outline-container-orgdf7764d" class="outline-4">
+<h4 id="orgdf7764d"><span class="section-number-4">1.7.10</span> 随机读写使用bloomfilter来加快速度，bloom-index-block</h4>
+</div>
+<div id="outline-container-org088aa3b" class="outline-4">
+<h4 id="org088aa3b"><span class="section-number-4">1.7.11</span> HFile就是LSM树中的高层实现。从逻辑上来讲，它是一棵满的3层B+树，从上到下的3层索引分别是Root index block、Intermediate index block和Leaf index block，对应到下面的Data block就是HFile的KeyValue结构了</h4>
+</div>
+<div id="outline-container-org572ad71" class="outline-4">
+<h4 id="org572ad71"><span class="section-number-4">1.7.12</span> 读放大、写放大、空间放大</h4>
+</div>
+</div>
+<div id="outline-container-org7ce2a96" class="outline-3">
+<h3 id="org7ce2a96"><span class="section-number-3">1.8</span> mysql中redo log和undo log区别</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-orgc1abf1a" class="outline-4">
+<h4 id="orgc1abf1a"><span class="section-number-4">1.8.1</span> redo log(wal [write after log] checkp point、write pos、物理格式日志、prepare和commit完成，两端式提交，事务提交前刷到硬盘上)</h4>
+<div class="outline-text-4" id="text-1-8-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgaf749f3"></a>重做日志有一个缓存区Innodb<sub>log</sub><sub>buffer</sub>，Innodb<sub>log</sub><sub>buffer的默认大小为8M</sub>(这里设置的16M),Innodb存储引擎先将重做日志写入innodb<sub>log</sub><sub>buffer中</sub>。<br />
+<div class="outline-text-5" id="text-1-8-1-1">
+<p>
+　　然后会通过以下三种方式将innodb日志缓冲区的日志刷新到磁盘
+　　1，Master Thread 每秒一次执行刷新Innodb<sub>log</sub><sub>buffer到重做日志文件</sub>。
+　　2，每个事务提交时会将重做日志刷新到重做日志文件。
+　　3，当重做日志缓存可用空间 少于一半时，重做日志缓存被刷新到重做日志文件
+　　由此可以看出，重做日志通过不止一种方式写入到磁盘，尤其是对于第一种方式，Innodb<sub>log</sub><sub>buffer到重做日志文件是Master</sub> Thread线程的定时任务。
+　　因此重做日志的写盘，并不一定是随着事务的提交才写入重做日志文件的，而是随着事务的开始，逐步开始的。
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge67152a" class="outline-4">
+<h4 id="orge67152a"><span class="section-number-4">1.8.2</span> undo log(逻辑格式日志)</h4>
+<div class="outline-text-4" id="text-1-8-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgeec4bdc"></a>保存了事务发生之前的数据的一个版本，可以用于回滚，同时可以提供多版本并发控制下的读（MVCC），也即非锁定读<br /></li>
+<li><a id="orgc8bec07"></a>逻辑格式的日志，在执行undo的时候，仅仅是将数据从逻辑上恢复至事务之前的状态，而不是从物理页面上操作实现的，这一点是不同于redo log的。<br /></li>
+<li><a id="org1af51c5"></a>什么时候释放：<br />
+<div class="outline-text-5" id="text-1-8-2-3">
+<p>
+ 　　当事务提交之后，undo log并不能立马被删除，
+ 　　而是放入待清理的链表，由purge线程判断是否由其他事务在使用undo段中表的上一个事务之前的版本信息，决定是否可以清理undo log的日志空间。
+    undo是在事务开始之前保存的被修改数据的一个版本，产生undo日志的时候，同样会伴随类似于保护事务持久化机制的redolog的产生。
+　　默认情况下undo文件是保持在共享表空间的，也即ibdatafile文件中，当数据库中发生一些大的事务性操作的时候，要生成大量的undo信息，全部保存在共享表空间中的。
+　　因此共享表空间可能会变的很大，默认情况下，也就是undo 日志使用共享表空间的时候，被“撑大”的共享表空间是不会也不能自动收缩的。
+　　因此，mysql5.7之后的“独立undo 表空间”的配置就显得很有必要了。
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgd1c17a7" class="outline-4">
+<h4 id="orgd1c17a7"><span class="section-number-4">1.8.3</span> binlog(逻辑格式的日志，事务提交后刷到硬盘上)</h4>
+<div class="outline-text-4" id="text-1-8-3">
+</div>
+<ol class="org-ol">
+<li><a id="orge9eada1"></a>1，用于复制，在主从复制中，从库利用主库上的binlog进行重播，实现主从同步。<br /></li>
+<li><a id="orgaf48ea4"></a>2，用于数据库的基于时间点的还原。<br /></li>
+<li><a id="org08b8906"></a>逻辑格式的日志，可以简单认为就是执行过的事务中的sql语句。<br />
+<div class="outline-text-5" id="text-1-8-3-3">
+<p>
+　　但又不完全是sql语句这么简单，而是包括了执行的sql语句（增删改）反向的信息，
+　　也就意味着delete对应着delete本身和其反向的insert；update对应着update执行前后的版本的信息；insert对应着delete和insert本身的信息。
+　　在使用mysqlbinlog解析binlog之后一些都会真相大白。
+　　因此可以基于binlog做到类似于oracle的闪回功能，其实都是依赖于binlog中的日志记录。
+</p>
+</div>
+</li>
+<li><a id="orgd1affa0"></a>什么时候产生：<br />
+<div class="outline-text-5" id="text-1-8-3-4">
+<p>
+　　事务提交的时候，一次性将事务中的sql语句（一个事物可能对应多个sql语句）按照一定的格式记录到binlog中。
+　　这里与redo log很明显的差异就是redo log并不一定是在事务提交的时候刷新到磁盘，redo log是在事务开始之后就开始逐步写入磁盘。
+　　因此对于事务的提交，即便是较大的事务，提交（commit）都是很快的，但是在开启了bin<sub>log的情况下</sub>，对于较大事务的提交，可能会变得比较慢一些。
+　　这是因为binlog是在事务提交的时候一次性写入的造成的，这些可以通过测试验证。
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdb8d0ea" class="outline-3">
+<h3 id="orgdb8d0ea"><span class="section-number-3">1.9</span> hystric实现滑动窗口</h3>
+</div>
+</div>
+<div id="outline-container-orgb877a92" class="outline-2">
+<h2 id="orgb877a92"><span class="section-number-2">2</span> <span class="done DONE">DONE</span> 二、涂鸦(智能场景)</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb62cc3d" class="outline-3">
+<h3 id="orgb62cc3d"><span class="section-number-3">2.1</span> 05-17</h3>
+</div>
+<div id="outline-container-orgccb4d5c" class="outline-3">
+<h3 id="orgccb4d5c"><span class="section-number-3">2.2</span> <a href="https://app.mokahr.com/video_interview?pw=033066250">https://app.mokahr.com/video_interview?pw=033066250</a></h3>
+</div>
+<div id="outline-container-orgaf5c5a0" class="outline-3">
+<h3 id="orgaf5c5a0"><span class="section-number-3">2.3</span> 项目</h3>
+</div>
+<div id="outline-container-org25ced77" class="outline-3">
+<h3 id="org25ced77"><span class="section-number-3">2.4</span> jvm内存</h3>
+</div>
+<div id="outline-container-org1d43d75" class="outline-3">
+<h3 id="org1d43d75"><span class="section-number-3">2.5</span> redis热键</h3>
+</div>
+<div id="outline-container-org757bc1c" class="outline-3">
+<h3 id="org757bc1c"><span class="section-number-3">2.6</span> mysql事务、回退、mvcc、undolog</h3>
+</div>
+<div id="outline-container-org86ca558" class="outline-3">
+<h3 id="org86ca558"><span class="section-number-3">2.7</span> mysql的简单使用 group by + having的使用场景</h3>
+</div>
+<div id="outline-container-orgd86a96e" class="outline-3">
+<h3 id="orgd86a96e"><span class="section-number-3">2.8</span> spring orm</h3>
+</div>
+<div id="outline-container-org9f72dd2" class="outline-3">
+<h3 id="org9f72dd2"><span class="section-number-3">2.9</span> 缓存穿透</h3>
+</div>
+</div>
+<div id="outline-container-orgd23a4ae" class="outline-2">
+<h2 id="orgd23a4ae"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> 三、北大信研院(数据处理中台)</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgfd2b698" class="outline-3">
+<h3 id="orgfd2b698"><span class="section-number-3">3.1</span> 05-17</h3>
+</div>
+<div id="outline-container-org01479fd" class="outline-3">
+<h3 id="org01479fd"><span class="section-number-3">3.2</span> java缺点</h3>
+</div>
+<div id="outline-container-orgfc48759" class="outline-3">
+<h3 id="orgfc48759"><span class="section-number-3">3.3</span> mysql索引</h3>
+</div>
+<div id="outline-container-org7f1e902" class="outline-3">
+<h3 id="org7f1e902"><span class="section-number-3">3.4</span> mysql记录所有增删该</h3>
+</div>
+<div id="outline-container-org4382e77" class="outline-3">
+<h3 id="org4382e77"><span class="section-number-3">3.5</span> aop实现原理 动态代理</h3>
+</div>
+<div id="outline-container-org0879e4c" class="outline-3">
+<h3 id="org0879e4c"><span class="section-number-3">3.6</span> 容器</h3>
+</div>
+<div id="outline-container-orgfa506f5" class="outline-3">
+<h3 id="orgfa506f5"><span class="section-number-3">3.7</span> redis key过期机制</h3>
+</div>
+<div id="outline-container-org17a5d07" class="outline-3">
+<h3 id="org17a5d07"><span class="section-number-3">3.8</span> jvm优化</h3>
+</div>
+</div>
+<div id="outline-container-orgd0aa2c3" class="outline-2">
+<h2 id="orgd0aa2c3"><span class="section-number-2">4</span> <span class="done DONE">DONE</span> 四、网易(低代码开发方向)</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4a64038" class="outline-3">
+<h3 id="org4a64038"><span class="section-number-3">4.1</span> 05-18</h3>
+</div>
+<div id="outline-container-org93a75ef" class="outline-3">
+<h3 id="org93a75ef"><span class="section-number-3">4.2</span> 7:00</h3>
+</div>
+<div id="outline-container-org3219b09" class="outline-3">
+<h3 id="org3219b09"><span class="section-number-3">4.3</span> lamdba实现原理+函数式编程(动态生成内部类)</h3>
+</div>
+<div id="outline-container-orgb6e8d29" class="outline-3">
+<h3 id="orgb6e8d29"><span class="section-number-3">4.4</span> 项目</h3>
+</div>
+<div id="outline-container-orgeb81109" class="outline-3">
+<h3 id="orgeb81109"><span class="section-number-3">4.5</span> 熔断</h3>
+</div>
+<div id="outline-container-orgbcd3fb9" class="outline-3">
+<h3 id="orgbcd3fb9"><span class="section-number-3">4.6</span> 设计模式(工厂模式)</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org22956c1" class="outline-4">
+<h4 id="org22956c1"><span class="section-number-4">4.6.1</span> 封装对象实例过程</h4>
+</div>
+</div>
+<div id="outline-container-orgbc492c4" class="outline-3">
+<h3 id="orgbc492c4"><span class="section-number-3">4.7</span> concurrenthashmap，key是否可以为null</h3>
+</div>
+<div id="outline-container-org597aed1" class="outline-3">
+<h3 id="org597aed1"><span class="section-number-3">4.8</span> 类的编译过程</h3>
+</div>
+<div id="outline-container-org8ad76ac" class="outline-3">
+<h3 id="org8ad76ac"><span class="section-number-3">4.9</span> sharding-jdbc使用中的问题</h3>
+<div class="outline-text-3" id="text-4-9">
+</div>
+<div id="outline-container-orgbe6f698" class="outline-4">
+<h4 id="orgbe6f698"><span class="section-number-4">4.9.1</span> 事务（本地事务、两阶段事务、柔性事务[最大努力推送]）</h4>
+</div>
+<div id="outline-container-orge4c5978" class="outline-4">
+<h4 id="orge4c5978"><span class="section-number-4">4.9.2</span> or、union、id这些不能用</h4>
+</div>
+</div>
+<div id="outline-container-orgfd446e6" class="outline-3">
+<h3 id="orgfd446e6"><span class="section-number-3">4.10</span> byte-tcc原理</h3>
+</div>
+</div>
+<div id="outline-container-org5635dd5" class="outline-2">
+<h2 id="org5635dd5"><span class="section-number-2">5</span> <span class="done DONE">DONE</span> 五、有赞(有赞云、教育、零售)</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org917aaee" class="outline-3">
+<h3 id="org917aaee"><span class="section-number-3">5.1</span> 05-18</h3>
+</div>
+<div id="outline-container-org58c4980" class="outline-3">
+<h3 id="org58c4980"><span class="section-number-3">5.2</span> 8:00</h3>
+</div>
+<div id="outline-container-org5b71744" class="outline-3">
+<h3 id="org5b71744"><span class="section-number-3">5.3</span> zset的结构：跳表 ziplist</h3>
+</div>
+<div id="outline-container-org32e96a7" class="outline-3">
+<h3 id="org32e96a7"><span class="section-number-3">5.4</span> set结构：hashtable inset</h3>
+</div>
+<div id="outline-container-orgc64043a" class="outline-3">
+<h3 id="orgc64043a"><span class="section-number-3">5.5</span> hash：ziplist hashtable</h3>
+</div>
+<div id="outline-container-org7d59d93" class="outline-3">
+<h3 id="org7d59d93"><span class="section-number-3">5.6</span> aof和rdb发生时机</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-orgcd5fd86" class="outline-4">
+<h4 id="orgcd5fd86"><span class="section-number-4">5.6.1</span> aof先放入内存缓存中，当everysec、always、no(由系统判断)</h4>
+</div>
+<div id="outline-container-orgfc4acc9" class="outline-4">
+<h4 id="orgfc4acc9"><span class="section-number-4">5.6.2</span> rdb: 主从同步、设置的时间规则、flushall、shutdown</h4>
+</div>
+</div>
+<div id="outline-container-org64a3707" class="outline-3">
+<h3 id="org64a3707"><span class="section-number-3">5.7</span> redis锁在执行过程中过期问题</h3>
+<div class="outline-text-3" id="text-5-7">
+</div>
+<div id="outline-container-org5b471f1" class="outline-4">
+<h4 id="org5b471f1"><span class="section-number-4">5.7.1</span> 使用watch dog进行监控，当客户端没有挂掉就续期</h4>
+</div>
+</div>
+<div id="outline-container-orgf9252f7" class="outline-3">
+<h3 id="orgf9252f7"><span class="section-number-3">5.8</span> 红黑树与跳表对比</h3>
+</div>
+<div id="outline-container-orgb5a262d" class="outline-3">
+<h3 id="orgb5a262d"><span class="section-number-3">5.9</span> http4次挥手，close<sub>wait过多问题</sub></h3>
+<div class="outline-text-3" id="text-5-9">
+</div>
+<div id="outline-container-org061d61a" class="outline-4">
+<h4 id="org061d61a"><span class="section-number-4">5.9.1</span> 用户大量断开，同时服务端keep-alive设置过长</h4>
+</div>
+</div>
+<div id="outline-container-orgc1f6b2d" class="outline-3">
+<h3 id="orgc1f6b2d"><span class="section-number-3">5.10</span> 读写锁(为什么高位是读，低位是写)</h3>
+<div class="outline-text-3" id="text-5-10">
+</div>
+<div id="outline-container-org3a8fe4f" class="outline-4">
+<h4 id="org3a8fe4f"><span class="section-number-4">5.10.1</span> 当要写入时，只需判断是否是0</h4>
+</div>
+</div>
+<div id="outline-container-orgf18485c" class="outline-3">
+<h3 id="orgf18485c"><span class="section-number-3">5.11</span> mysql中的redolog、undolog、binlog</h3>
+<div class="outline-text-3" id="text-5-11">
+</div>
+<div id="outline-container-org2aa1614" class="outline-4">
+<h4 id="org2aa1614"><span class="section-number-4">5.11.1</span> redolog写入时间：事务开始后陆续写入缓冲区、在事务提交时刷入磁盘(innodb-flush-log-at-trx-commit参数)</h4>
+<div class="outline-text-4" id="text-5-11-1">
+</div>
+<ol class="org-ol">
+<li><a id="org088f025"></a>0 – 每N秒将Redo Log Buffer的记录写入Redo Log文件，并且将文件刷入硬件存储1次。N由innodb<sub>flush</sub><sub>log</sub><sub>at</sub><sub>timeout控制</sub>。<br /></li>
+<li><a id="orga47d948"></a>1 – 每个事务提交时，将记录从Redo Log Buffer写入Redo Log文件，并且将文件刷入硬件存储。<br /></li>
+<li><a id="org6487c51"></a>2 – 每个事务提交时，仅将记录从Redo Log Buffer写入Redo Log文件。Redo Log何时刷入硬件存储由操作系统和innodb<sub>flush</sub><sub>log</sub><sub>at</sub><sub>timeout决定</sub>。这个选项可以保证在MySQL宕机，而操作系统正常工作时，数据的完整性。<br /></li>
+</ol>
+</div>
+<div id="outline-container-org9892f19" class="outline-4">
+<h4 id="org9892f19"><span class="section-number-4">5.11.2</span> binlog:(sync-binlog参数)事务提交前</h4>
+<div class="outline-text-4" id="text-5-11-2">
+</div>
+<ol class="org-ol">
+<li><a id="org40bd34b"></a>1:在事务提交前刷入磁盘<br /></li>
+<li><a id="orgb53dc1f"></a>0:禁止MySQL服务器将二进制日志同步到磁盘。相反，MySQL服务器依赖于操作系统不时地将二进制日志刷新到磁盘，就像处理其他文件一样<br /></li>
+<li><a id="org4eee12b"></a>N：其中N是0或1之外的值:在收集了N个二进制日志提交组之后，将二进制日志同步到磁盘。<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgf91f455" class="outline-4">
+<h4 id="orgf91f455"><span class="section-number-4">5.11.3</span> 数据不一致问题</h4>
+<div class="outline-text-4" id="text-5-11-3">
+</div>
+<ol class="org-ol">
+<li><a id="org79f3c7d"></a>MySQL引入二阶段提交（two phase commit or 2pc），MySQL内部会自动将普通事务当做一个XA事务（内部分布式事务）来处理<br /></li>
+<li><a id="orgd1aff13"></a>自动为每个事务分配一个唯一的ID（XID）。<br /></li>
+<li><a id="org75f72e7"></a>COMMIT会被自动的分成Prepare和Commit两个阶段。<br /></li>
+<li><a id="org3c354d7"></a>Binlog会被当做事务协调者(Transaction Coordinator)，Binlog Event会被当做协调者日志。<br /></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4e41655" class="outline-2">
+<h2 id="org4e41655"><span class="section-number-2">6</span> <span class="done DONE">DONE</span> 六、同花顺</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgfe469e1" class="outline-3">
+<h3 id="orgfe469e1"><span class="section-number-3">6.1</span> 1面</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org4d94138" class="outline-4">
+<h4 id="org4d94138"><span class="section-number-4">6.1.1</span> 05-19</h4>
+</div>
+<div id="outline-container-orgc3934e1" class="outline-4">
+<h4 id="orgc3934e1"><span class="section-number-4">6.1.2</span> 19:00</h4>
+</div>
+<div id="outline-container-org9eaddf5" class="outline-4">
+<h4 id="org9eaddf5"><span class="section-number-4">6.1.3</span> 秒杀系统</h4>
+</div>
+<div id="outline-container-org7cfc75c" class="outline-4">
+<h4 id="org7cfc75c"><span class="section-number-4">6.1.4</span> redis深入</h4>
+</div>
+<div id="outline-container-orgcfbe0fd" class="outline-4">
+<h4 id="orgcfbe0fd"><span class="section-number-4">6.1.5</span> 熔断(线程隔离、信号量隔离)</h4>
+</div>
+<div id="outline-container-org0b9ccd6" class="outline-4">
+<h4 id="org0b9ccd6"><span class="section-number-4">6.1.6</span> cpu飙高如何查看</h4>
+</div>
+<div id="outline-container-orgf224340" class="outline-4">
+<h4 id="orgf224340"><span class="section-number-4">6.1.7</span> rabbitmq如何实现幂等、修改数据问题</h4>
+</div>
+<div id="outline-container-orgb8cf5f4" class="outline-4">
+<h4 id="orgb8cf5f4"><span class="section-number-4">6.1.8</span> netty(原理、心跳、多节点部署时如何判断是哪台机器上的连接)</h4>
+</div>
+<div id="outline-container-org9799194" class="outline-4">
+<h4 id="org9799194"><span class="section-number-4">6.1.9</span> 算法题(数组合并)</h4>
+</div>
+</div>
+<div id="outline-container-org92aabb2" class="outline-3">
+<h3 id="org92aabb2"><span class="section-number-3">6.2</span> 2面</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org098b016" class="outline-4">
+<h4 id="org098b016"><span class="section-number-4">6.2.1</span> 05-22</h4>
+</div>
+<div id="outline-container-orgac53e80" class="outline-4">
+<h4 id="orgac53e80"><span class="section-number-4">6.2.2</span> 09:30</h4>
+</div>
+<div id="outline-container-org1258232" class="outline-4">
+<h4 id="org1258232"><span class="section-number-4">6.2.3</span> aop</h4>
+</div>
+<div id="outline-container-org71542b2" class="outline-4">
+<h4 id="org71542b2"><span class="section-number-4">6.2.4</span> mybatis的使用，连接池大小设置20</h4>
+</div>
+<div id="outline-container-org94801d0" class="outline-4">
+<h4 id="org94801d0"><span class="section-number-4">6.2.5</span> 最近学习的内容&#x2013;林奇的数据库 连接池的作用</h4>
+</div>
+</div>
+<div id="outline-container-org8680f45" class="outline-3">
+<h3 id="org8680f45"><span class="section-number-3">6.3</span> 3面</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-orgcc3ac3b" class="outline-4">
+<h4 id="orgcc3ac3b"><span class="section-number-4">6.3.1</span> 05-22</h4>
+</div>
+<div id="outline-container-orgad2cb98" class="outline-4">
+<h4 id="orgad2cb98"><span class="section-number-4">6.3.2</span> 19:00</h4>
+</div>
+<div id="outline-container-orgcd13e65" class="outline-4">
+<h4 id="orgcd13e65"><span class="section-number-4">6.3.3</span> hr面</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc47cec4" class="outline-2">
+<h2 id="orgc47cec4"><span class="section-number-2">7</span> <span class="done DONE">DONE</span> 七、阿里巴巴</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgce2f06d" class="outline-3">
+<h3 id="orgce2f06d"><span class="section-number-3">7.1</span> 一面</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgd70591e" class="outline-4">
+<h4 id="orgd70591e"><span class="section-number-4">7.1.1</span> 05-25</h4>
+</div>
+<div id="outline-container-orgfc1ebc0" class="outline-4">
+<h4 id="orgfc1ebc0"><span class="section-number-4">7.1.2</span> 21:00</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org0a8e6f6" class="outline-2">
+<h2 id="org0a8e6f6"><span class="section-number-2">8</span> <span class="done DONE">DONE</span> 九、云集</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orga74a9c0" class="outline-3">
+<h3 id="orga74a9c0"><span class="section-number-3">8.1</span> 一面</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-orge0a31fa" class="outline-4">
+<h4 id="orge0a31fa"><span class="section-number-4">8.1.1</span> 05月31日10:30</h4>
+</div>
+<div id="outline-container-org3753f13" class="outline-4">
+<h4 id="org3753f13"><span class="section-number-4">8.1.2</span> sharding-jdbc 分表的id选择、查找指定id、分页</h4>
+</div>
+<div id="outline-container-org35ad29d" class="outline-4">
+<h4 id="org35ad29d"><span class="section-number-4">8.1.3</span> redis的数据结构、集群如何查找、hash如何复制、代码中如何写</h4>
+</div>
+<div id="outline-container-org0274f5a" class="outline-4">
+<h4 id="org0274f5a"><span class="section-number-4">8.1.4</span> mysql 中的回表</h4>
+</div>
+<div id="outline-container-org4767947" class="outline-4">
+<h4 id="org4767947"><span class="section-number-4">8.1.5</span> springboot的aop</h4>
+</div>
+<div id="outline-container-org0c01b72" class="outline-4">
+<h4 id="org0c01b72"><span class="section-number-4">8.1.6</span> 低代码项目问题</h4>
+</div>
+<div id="outline-container-org7063957" class="outline-4">
+<h4 id="org7063957"><span class="section-number-4">8.1.7</span> rabbitmq选择原因</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgac2f7c7" class="outline-2">
+<h2 id="orgac2f7c7"><span class="section-number-2">9</span> <span class="done DONE">DONE</span> 婚礼纪(2021-06-01 14:00)</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org0755e18" class="outline-3">
+<h3 id="org0755e18"><span class="section-number-3">9.1</span> 一面</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-org5ee75a4" class="outline-4">
+<h4 id="org5ee75a4"><span class="section-number-4">9.1.1</span> 面试时间：2021-05-27 19:00 GMT+08:00​</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<p>
+面试链接：<a href="https://v5hhs75fgk.feishu.cn/hire/bridge/video/interviewee/d1627634-af25-4647-8a22-562a0f408afc">https://v5hhs75fgk.feishu.cn/hire/bridge/video/interviewee/d1627634-af25-4647-8a22-562a0f408afc</a>​
+视频面试开始前，请先下载对应视频软件 <a href="https://www.feishu.cn/download">https://www.feishu.cn/download</a>​
+</p>
+</div>
+</div>
+<div id="outline-container-org42df3e3" class="outline-4">
+<h4 id="org42df3e3"><span class="section-number-4">9.1.2</span> 项目介绍、秒杀系统的场景、缓存+消息队列异步</h4>
+</div>
+<div id="outline-container-org031a944" class="outline-4">
+<h4 id="org031a944"><span class="section-number-4">9.1.3</span> mysql优化、索引、事务、redo、undo、binlog</h4>
+</div>
+<div id="outline-container-org3540f0f" class="outline-4">
+<h4 id="org3540f0f"><span class="section-number-4">9.1.4</span> redis、为什么快、rdb和aof、rdb的过程</h4>
+</div>
+<div id="outline-container-org341c93f" class="outline-4">
+<h4 id="org341c93f"><span class="section-number-4">9.1.5</span> jvm内存模型、内存逃逸：原因</h4>
+</div>
+<div id="outline-container-org15fdbc9" class="outline-4">
+<h4 id="org15fdbc9"><span class="section-number-4">9.1.6</span> go的协程</h4>
+</div>
+</div>
+<div id="outline-container-org7905a0c" class="outline-3">
+<h3 id="org7905a0c"><span class="section-number-3">9.2</span> 二面</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-orgca154d8" class="outline-4">
+<h4 id="orgca154d8"><span class="section-number-4">9.2.1</span> 2021-06-01 14:00</h4>
+</div>
+<div id="outline-container-orgf9bc6af" class="outline-4">
+<h4 id="orgf9bc6af"><span class="section-number-4">9.2.2</span> hrbp</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orga652a3c" class="outline-2">
+<h2 id="orga652a3c"><span class="section-number-2">10</span> <span class="done DONE">DONE</span> 有赞(2021-06-01 15:00)</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org34195a9" class="outline-3">
+<h3 id="org34195a9"><span class="section-number-3">10.1</span> 一面</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-orge9fd0bf" class="outline-4">
+<h4 id="orge9fd0bf"><span class="section-number-4">10.1.1</span> 面试日期：06月01日</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<p>
+面试时间：15:00
+面试时长：1小时（可能视面试情况缩减或延长，请预留一定缓冲时间）
+面试形式：视频面试
+面试地点：<a href="https://meeting.tencent.com/s/a8CYT9V5Shzq">https://meeting.tencent.com/s/a8CYT9V5Shzq</a>
+联系人：张海华
+联系人电话：17746843364
+</p>
+</div>
+</div>
+<div id="outline-container-orgd8200cd" class="outline-4">
+<h4 id="orgd8200cd"><span class="section-number-4">10.1.2</span> 项目做了什么</h4>
+</div>
+<div id="outline-container-org5020de8" class="outline-4">
+<h4 id="org5020de8"><span class="section-number-4">10.1.3</span> sharding-jdbc的id问题、生成器的高可用</h4>
+</div>
+<div id="outline-container-orga443983" class="outline-4">
+<h4 id="orga443983"><span class="section-number-4">10.1.4</span> mysql中的事务、锁</h4>
+</div>
+<div id="outline-container-org73a1468" class="outline-4">
+<h4 id="org73a1468"><span class="section-number-4">10.1.5</span> jvm回收、不同代、参数类型</h4>
+</div>
+<div id="outline-container-orgd8a6891" class="outline-4">
+<h4 id="orgd8a6891"><span class="section-number-4">10.1.6</span> java动态代理</h4>
+</div>
+<div id="outline-container-org267cef3" class="outline-4">
+<h4 id="org267cef3"><span class="section-number-4">10.1.7</span> 反射的原理</h4>
+</div>
+<div id="outline-container-org985c7f0" class="outline-4">
+<h4 id="org985c7f0"><span class="section-number-4">10.1.8</span> concurrenthashmap</h4>
+</div>
+<div id="outline-container-orgefa8358" class="outline-4">
+<h4 id="orgefa8358"><span class="section-number-4">10.1.9</span> 线程池参数</h4>
+</div>
+<div id="outline-container-org5ad7f23" class="outline-4">
+<h4 id="org5ad7f23"><span class="section-number-4">10.1.10</span> nio、aio、bio</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org29769da" class="outline-2">
+<h2 id="org29769da"><span class="section-number-2">11</span> <span class="done DONE">DONE</span> 恒生电子(2021/06/02 14:00)</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgf83983c" class="outline-3">
+<h3 id="orgf83983c"><span class="section-number-3">11.1</span> 一面</h3>
+<div class="outline-text-3" id="text-11-1">
+</div>
+<div id="outline-container-org048fc7e" class="outline-4">
+<h4 id="org048fc7e"><span class="section-number-4">11.1.1</span> HR兰燕 邀请您参加腾讯会议</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<p>
+会议主题：朱赵元面试 
+会议时间：2021/06/02 18:30-19:00 (GMT+08:00) 中国标准时间 - 北京 
+点击链接入会，或添加至会议列表： 
+<a href="https://meeting.tencent.com/s/gweAWH9zg0bU">https://meeting.tencent.com/s/gweAWH9zg0bU</a> 
+会议 ID：244 655 049
+</p>
+</div>
+</div>
+<div id="outline-container-org7dfc6b7" class="outline-4">
+<h4 id="org7dfc6b7"><span class="section-number-4">11.1.2</span> 车主服务介绍</h4>
+</div>
+<div id="outline-container-orgf1136f7" class="outline-4">
+<h4 id="orgf1136f7"><span class="section-number-4">11.1.3</span> jvm内存监控</h4>
+</div>
+<div id="outline-container-org34e3b2a" class="outline-4">
+<h4 id="org34e3b2a"><span class="section-number-4">11.1.4</span> docker命令</h4>
+</div>
+<div id="outline-container-org8049863" class="outline-4">
+<h4 id="org8049863"><span class="section-number-4">11.1.5</span> jdk1.8新特性</h4>
+</div>
+<div id="outline-container-org52e342f" class="outline-4">
+<h4 id="org52e342f"><span class="section-number-4">11.1.6</span> 源码阅读</h4>
+</div>
+<div id="outline-container-org3def02c" class="outline-4">
+<h4 id="org3def02c"><span class="section-number-4">11.1.7</span> 团队管理</h4>
+</div>
+<div id="outline-container-orgea9d545" class="outline-4">
+<h4 id="orgea9d545"><span class="section-number-4">11.1.8</span> 动态规划介绍</h4>
+</div>
+<div id="outline-container-orgfc8bbcb" class="outline-4">
+<h4 id="orgfc8bbcb"><span class="section-number-4">11.1.9</span> 最新学了什么</h4>
+</div>
+<div id="outline-container-org8660ef4" class="outline-4">
+<h4 id="org8660ef4"><span class="section-number-4">11.1.10</span> 有写过专利吗</h4>
+</div>
+<div id="outline-container-org39657bf" class="outline-4">
+<h4 id="org39657bf"><span class="section-number-4">11.1.11</span> 论文有吗</h4>
+</div>
+<div id="outline-container-orgf7e086c" class="outline-4">
+<h4 id="orgf7e086c"><span class="section-number-4">11.1.12</span> 英语怎么样</h4>
+</div>
+<div id="outline-container-orgfac4d95" class="outline-4">
+<h4 id="orgfac4d95"><span class="section-number-4">11.1.13</span> 是否能出差</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9a6a596" class="outline-2">
+<h2 id="org9a6a596"><span class="section-number-2">12</span> <span class="done DONE">DONE</span> hello出行(2021/06/03 16:00)</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-org70fe710" class="outline-3">
+<h3 id="org70fe710"><span class="section-number-3">12.1</span> 一面</h3>
+<div class="outline-text-3" id="text-12-1">
+</div>
+<div id="outline-container-org8881a7f" class="outline-4">
+<h4 id="org8881a7f"><span class="section-number-4">12.1.1</span> jmm模型</h4>
+</div>
+<div id="outline-container-org653066b" class="outline-4">
+<h4 id="org653066b"><span class="section-number-4">12.1.2</span> juc使用、多线程</h4>
+</div>
+<div id="outline-container-org9972996" class="outline-4">
+<h4 id="org9972996"><span class="section-number-4">12.1.3</span> aqs是什么，state怎么修改</h4>
+</div>
+<div id="outline-container-orgddfeff7" class="outline-4">
+<h4 id="orgddfeff7"><span class="section-number-4">12.1.4</span> threadlocal使用</h4>
+</div>
+<div id="outline-container-orga8eb962" class="outline-4">
+<h4 id="orga8eb962"><span class="section-number-4">12.1.5</span> 服务治理怎么设计</h4>
+</div>
+<div id="outline-container-orgaf1c8f7" class="outline-4">
+<h4 id="orgaf1c8f7"><span class="section-number-4">12.1.6</span> rpc怎么设计</h4>
+</div>
+<div id="outline-container-org8e83cd0" class="outline-4">
+<h4 id="org8e83cd0"><span class="section-number-4">12.1.7</span> mysql隔离级别、原理是什么、如何在rr下避免幻读、索引类型、聚类索引、默认隔离级别</h4>
+</div>
+<div id="outline-container-org535890d" class="outline-4">
+<h4 id="org535890d"><span class="section-number-4">12.1.8</span> 如何实现mq的顺序消费</h4>
+</div>
+<div id="outline-container-org0f47fbd" class="outline-4">
+<h4 id="org0f47fbd"><span class="section-number-4">12.1.9</span> redis的缓存击穿如何处理、使用bloomfilter如何实现、是否使用白名单</h4>
+</div>
+<div id="outline-container-org31625ff" class="outline-4">
+<h4 id="org31625ff"><span class="section-number-4">12.1.10</span> 账号A给账号B转账100，伪代码实现</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org70b25a1" class="outline-2">
+<h2 id="org70b25a1"><span class="section-number-2">13</span> <span class="done DONE">DONE</span> 字节(2021-06-07 16:00)</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-orgbcb8a5a" class="outline-3">
+<h3 id="orgbcb8a5a"><span class="section-number-3">13.1</span> 一面</h3>
+<div class="outline-text-3" id="text-13-1">
+</div>
+<div id="outline-container-org3af1c96" class="outline-4">
+<h4 id="org3af1c96"><span class="section-number-4">13.1.1</span> 面试形式：视频面试​</h4>
+<div class="outline-text-4" id="text-13-1-1">
+<p>
+面试时间：2021-06-07 16:00GMT+08:00​
+面试链接：<a href="https://people.toutiaocloud.com/hire/bridge/video/interviewee/ef30fe6f-0ccf-4bf4-9825-e6209804edbf">https://people.toutiaocloud.com/hire/bridge/video/interviewee/ef30fe6f-0ccf-4bf4-9825-e6209804edbf</a>​
+</p>
+</div>
+</div>
+<div id="outline-container-org05ea26d" class="outline-4">
+<h4 id="org05ea26d"><span class="section-number-4">13.1.2</span> 乐观锁和悲观锁有哪些，区别是什么，cas的缺陷</h4>
+</div>
+<div id="outline-container-orgdd9e615" class="outline-4">
+<h4 id="orgdd9e615"><span class="section-number-4">13.1.3</span> 项目介绍，项目中出现的问题(下级访问出问题、Gc频繁、内存溢出、redis gc时卡顿)</h4>
+</div>
+<div id="outline-container-org7cdf785" class="outline-4">
+<h4 id="org7cdf785"><span class="section-number-4">13.1.4</span> 对象生成到哪里，栈中、tlab、老年代、jmm、内存逃逸</h4>
+</div>
+<div id="outline-container-org57d6f27" class="outline-4">
+<h4 id="org57d6f27"><span class="section-number-4">13.1.5</span> younggc和fullgc中是否有stw</h4>
+</div>
+<div id="outline-container-orgb174b1d" class="outline-4">
+<h4 id="orgb174b1d"><span class="section-number-4">13.1.6</span> 线程池的使用，设置多少个数量合适</h4>
+</div>
+<div id="outline-container-org71c0053" class="outline-4">
+<h4 id="org71c0053"><span class="section-number-4">13.1.7</span> cpu 100%如何查看</h4>
+</div>
+<div id="outline-container-orge9d7f2c" class="outline-4">
+<h4 id="orge9d7f2c"><span class="section-number-4">13.1.8</span> 内存过高如何查看</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org871d16a" class="outline-2">
+<h2 id="org871d16a"><span class="section-number-2">14</span> <span class="done DONE">DONE</span> 滴滴出行(2021-06-08 15:00)</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-orga3d84c0" class="outline-3">
+<h3 id="orga3d84c0"><span class="section-number-3">14.1</span> 一面</h3>
+<div class="outline-text-3" id="text-14-1">
+</div>
+<div id="outline-container-org5107ea2" class="outline-4">
+<h4 id="org5107ea2"><span class="section-number-4">14.1.1</span> 前往参加滴滴货运-JAVA高级/资深研发工程师职位的视频面试，面试链接：<a href="https://z.didi.cn/vANs8Ys">https://z.didi.cn/vANs8Ys</a>，</h4>
+<div class="outline-text-4" id="text-14-1-1">
+<p>
+(面试是umeet视频的形式，需要提前下载umeet app或者客户端，届时直接点击会议链接进入即可)届时请保持通讯的通畅。如有任何问题请联系：李心悦（15037173673）更多详情请见邮件。
+</p>
+</div>
+</div>
+<div id="outline-container-org2018f5e" class="outline-4">
+<h4 id="org2018f5e"><span class="section-number-4">14.1.2</span> 齐车大圣项目流程</h4>
+</div>
+<div id="outline-container-orgc289ff0" class="outline-4">
+<h4 id="orgc289ff0"><span class="section-number-4">14.1.3</span> 整体架构</h4>
+</div>
+<div id="outline-container-org6634e38" class="outline-4">
+<h4 id="org6634e38"><span class="section-number-4">14.1.4</span> 降级操作</h4>
+</div>
+<div id="outline-container-org19e1b60" class="outline-4">
+<h4 id="org19e1b60"><span class="section-number-4">14.1.5</span> 线程池&#x2014;内存溢出、jvm查看、cms</h4>
+</div>
+<div id="outline-container-org4f5589c" class="outline-4">
+<h4 id="org4f5589c"><span class="section-number-4">14.1.6</span> 分表&#x2014;如何分表、以哪个为主键、用userid如何查询</h4>
+</div>
+<div id="outline-container-org13e48fe" class="outline-4">
+<h4 id="org13e48fe"><span class="section-number-4">14.1.7</span> springcloud如何调用&#x2014;eureka、feign、ribbion、rpc原理</h4>
+</div>
+</div>
+<div id="outline-container-org3e6c2ba" class="outline-3">
+<h3 id="org3e6c2ba"><span class="section-number-3">14.2</span> 二面</h3>
+<div class="outline-text-3" id="text-14-2">
+</div>
+<div id="outline-container-org6b32f9d" class="outline-4">
+<h4 id="org6b32f9d"><span class="section-number-4">14.2.1</span> 【滴滴出行】 朱赵元同学，您好！ 现邀请你于2021-06-04 14:00，前往参加滴滴货运-JAVA高级/资深研发工程师职位的视频面试，</h4>
+<div class="outline-text-4" id="text-14-2-1">
+<p>
+面试链接：<a href="https://z.didi.cn/EBN7O7d">https://z.didi.cn/EBN7O7d</a>，(面试是umeet视频的形式，需要提前下载umeet app或者客户端，
+届时直接点击会议链接进入即可)届时请保持通讯的通畅。如有任何问题请联系：李心悦（15037173673）更多详情请见邮件。  
+</p>
+</div>
+</div>
+<div id="outline-container-org20a9e4d" class="outline-4">
+<h4 id="org20a9e4d"><span class="section-number-4">14.2.2</span> 项目</h4>
+</div>
+<div id="outline-container-org9c1ef27" class="outline-4">
+<h4 id="org9c1ef27"><span class="section-number-4">14.2.3</span> jvm 内存溢出查看方法 cms G1 吞吐量优先的prallel-old  jmm和volatile关系</h4>
+</div>
+<div id="outline-container-orge96dae8" class="outline-4">
+<h4 id="orge96dae8"><span class="section-number-4">14.2.4</span> cpu 100%查看 us sy干嘛用的</h4>
+</div>
+<div id="outline-container-org59be660" class="outline-4">
+<h4 id="org59be660"><span class="section-number-4">14.2.5</span> mysql 删除重复telephone</h4>
+</div>
+<div id="outline-container-orgd77302a" class="outline-4">
+<h4 id="orgd77302a"><span class="section-number-4">14.2.6</span> 大数查重</h4>
+</div>
+<div id="outline-container-orgc1fcc3d" class="outline-4">
+<h4 id="orgc1fcc3d"><span class="section-number-4">14.2.7</span> redis的缓存淘汰</h4>
+</div>
+<div id="outline-container-org140bac3" class="outline-4">
+<h4 id="org140bac3"><span class="section-number-4">14.2.8</span> 大量用户查订单数量</h4>
+</div>
+<div id="outline-container-org3e994aa" class="outline-4">
+<h4 id="org3e994aa"><span class="section-number-4">14.2.9</span> 快排</h4>
+</div>
+<div id="outline-container-orge1e4e94" class="outline-4">
+<h4 id="orge1e4e94"><span class="section-number-4">14.2.10</span> 动态规划</h4>
+</div>
+<div id="outline-container-org0d14005" class="outline-4">
+<h4 id="org0d14005"><span class="section-number-4">14.2.11</span> volatile内存屏障、happen-before</h4>
+</div>
+</div>
+<div id="outline-container-org53aaa53" class="outline-3">
+<h3 id="org53aaa53"><span class="section-number-3">14.3</span> 三面</h3>
+<div class="outline-text-3" id="text-14-3">
+</div>
+<div id="outline-container-orgb6f745b" class="outline-4">
+<h4 id="orgb6f745b"><span class="section-number-4">14.3.1</span> 【滴滴出行】</h4>
+<div class="outline-text-4" id="text-14-3-1">
+<p>
+朱赵元同学，您好！ 
+现邀请你于2021-06-08 15:00，前往参加滴滴货运-JAVA高级/资深研发工程师职位的视频面试，
+面试链接：<a href="https://z.didi.cn/AFrjHA0">https://z.didi.cn/AFrjHA0</a>，(面试是umeet视频的形式，需要提前下载umeet app或者客户端，
+届时直接点击会议链接进入即可)届时请保持通讯的通畅。如有任何问题请联系：李心悦（15037173673）更多详情请见邮件。  
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2a36e34" class="outline-2">
+<h2 id="org2a36e34"><span class="section-number-2">15</span> 网易(2021-06-11 19:00)</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-orgeb7c99d" class="outline-3">
+<h3 id="orgeb7c99d"><span class="section-number-3">15.1</span> 一面</h3>
+<div class="outline-text-3" id="text-15-1">
+</div>
+<div id="outline-container-org6ee80e0" class="outline-4">
+<h4 id="org6ee80e0"><span class="section-number-4">15.1.1</span> 1. 面试职位 - 云信-资深Java服务端研发工程师</h4>
+<div class="outline-text-4" id="text-15-1-1">
+<ol class="org-ol">
+<li>面试方式 - 电话面试</li>
+<li>面试时间 - 2021-06-09 20:00</li>
+<li>面试地点 -</li>
+</ol>
+<p>
+请在面试前填写应聘登记表 ，如已填写请忽略。
+（如果点击以上链接没有跳转到应聘登记表填写网址，
+请复制以下链接到浏览器窗口打开：<a href="http://hr.163.com/interview/fillApplicationRegister.do?applicantId=1881340&amp;applyId=3855740&amp;ssid=48b9a823772addfe6ebdc928f64f4e8af5b56adcb0c731ff">http://hr.163.com/interview/fillApplicationRegister.do?applicantId=1881340&amp;applyId=3855740&amp;ssid=48b9a823772addfe6ebdc928f64f4e8af5b56adcb0c731ff</a>）
+</p>
+</div>
+</div>
+<div id="outline-container-org1efc05a" class="outline-4">
+<h4 id="org1efc05a"><span class="section-number-4">15.1.2</span> 项目-违章查询-遇到的问题-一致性问题</h4>
+</div>
+<div id="outline-container-org98addae" class="outline-4">
+<h4 id="org98addae"><span class="section-number-4">15.1.3</span> tcc实现</h4>
+</div>
+<div id="outline-container-orgfdfcacd" class="outline-4">
+<h4 id="orgfdfcacd"><span class="section-number-4">15.1.4</span> redis缓存-多级缓存</h4>
+</div>
+<div id="outline-container-orgeb79e4a" class="outline-4">
+<h4 id="orgeb79e4a"><span class="section-number-4">15.1.5</span> feign的实现</h4>
+</div>
+<div id="outline-container-org97fd94e" class="outline-4">
+<h4 id="org97fd94e"><span class="section-number-4">15.1.6</span> eurake实现</h4>
+</div>
+<div id="outline-container-org6732833" class="outline-4">
+<h4 id="org6732833"><span class="section-number-4">15.1.7</span> hystrix实现</h4>
+</div>
+<div id="outline-container-org1dbb77c" class="outline-4">
+<h4 id="org1dbb77c"><span class="section-number-4">15.1.8</span> http请求过程</h4>
+</div>
+<div id="outline-container-orge5a3e61" class="outline-4">
+<h4 id="orge5a3e61"><span class="section-number-4">15.1.9</span> 多线程并发</h4>
+</div>
+</div>
+<div id="outline-container-org1890f53" class="outline-3">
+<h3 id="org1890f53"><span class="section-number-3">15.2</span> 二面</h3>
+<div class="outline-text-3" id="text-15-2">
+</div>
+<div id="outline-container-org22f3de9" class="outline-4">
+<h4 id="org22f3de9"><span class="section-number-4">15.2.1</span> 1. 面试职位：云信-资深Java服务端研发工程师</h4>
+<div class="outline-text-4" id="text-15-2-1">
+<ol class="org-ol">
+<li>面试方式：视频面试</li>
+<li>面试时间：2021-06-11 19:00</li>
+<li>视频面试链接：<a href="https://wm.netease.com/#/index/join?confno=700894838">https://wm.netease.com/#/index/join?confno=700894838</a></li>
+</ol>
+<p>
+视频面试会议号：700894838
+（面试前请查看Webmeeting视频面试使用说明：webmeeting视频面试使用手册-候选人版.pdf）
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4a6e1e5" class="outline-2">
+<h2 id="org4a6e1e5"><span class="section-number-2">16</span> 得物(2021-06-09 21:00)</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+<div id="outline-container-org290b589" class="outline-3">
+<h3 id="org290b589"><span class="section-number-3">16.1</span> 一面</h3>
+<div class="outline-text-3" id="text-16-1">
+</div>
+<div id="outline-container-org5415fbe" class="outline-4">
+<h4 id="org5415fbe"><span class="section-number-4">16.1.1</span> 面试日期：06月04日</h4>
+<div class="outline-text-4" id="text-16-1-1">
+<p>
+面试时间：16:00
+面试方式：视频面试，请在安静的会议室或房间，并保持网络畅通
+（需提前下载“飞书”，并添加HR飞书好友“15601755431”）
+联系电话：李凤娟15601755431
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc63258" class="outline-4">
+<h4 id="orgcc63258"><span class="section-number-4">16.1.2</span> 齐车大圣项目</h4>
+</div>
+<div id="outline-container-orgdea328a" class="outline-4">
+<h4 id="orgdea328a"><span class="section-number-4">16.1.3</span> Lru算法实现</h4>
+</div>
+<div id="outline-container-orgbb182f2" class="outline-4">
+<h4 id="orgbb182f2"><span class="section-number-4">16.1.4</span> jvm中的新生代老年代、以及新生代的回收机制、老年代的回收机制、cms的作用+serial old</h4>
+</div>
+<div id="outline-container-org2e69ff4" class="outline-4">
+<h4 id="org2e69ff4"><span class="section-number-4">16.1.5</span> 秒杀系统</h4>
+</div>
+<div id="outline-container-org7343819" class="outline-4">
+<h4 id="org7343819"><span class="section-number-4">16.1.6</span> 如何判断流量</h4>
+</div>
+<div id="outline-container-org63062aa" class="outline-4">
+<h4 id="org63062aa"><span class="section-number-4">16.1.7</span> rabbitmq的消费确认，幂等</h4>
+</div>
+<div id="outline-container-org261de48" class="outline-4">
+<h4 id="org261de48"><span class="section-number-4">16.1.8</span> 熔断如何处理、限流如何做</h4>
+</div>
+<div id="outline-container-orgcac5577" class="outline-4">
+<h4 id="orgcac5577"><span class="section-number-4">16.1.9</span> 双11这种场景如何架构</h4>
+</div>
+<div id="outline-container-org05984ee" class="outline-4">
+<h4 id="org05984ee"><span class="section-number-4">16.1.10</span> mysql中的默认隔离级别rr，以及mvcc的作用，如何避免幻读</h4>
+</div>
+<div id="outline-container-org7dc5371" class="outline-4">
+<h4 id="org7dc5371"><span class="section-number-4">16.1.11</span> spring中的ioc理解，postprocessor的使用</h4>
+</div>
+<div id="outline-container-org0810fd5" class="outline-4">
+<h4 id="org0810fd5"><span class="section-number-4">16.1.12</span> bean的生命周期</h4>
+</div>
+</div>
+<div id="outline-container-org03c4205" class="outline-3">
+<h3 id="org03c4205"><span class="section-number-3">16.2</span> 二面</h3>
+<div class="outline-text-3" id="text-16-2">
+</div>
+<div id="outline-container-orge79e7c3" class="outline-4">
+<h4 id="orge79e7c3"><span class="section-number-4">16.2.1</span> 项目-车主服务</h4>
+</div>
+<div id="outline-container-org4f66eb6" class="outline-4">
+<h4 id="org4f66eb6"><span class="section-number-4">16.2.2</span> 工业低代码-分表算法</h4>
+</div>
+<div id="outline-container-orgd0c5f2e" class="outline-4">
+<h4 id="orgd0c5f2e"><span class="section-number-4">16.2.3</span> 链路跟踪</h4>
+</div>
+<div id="outline-container-orge1c4066" class="outline-4">
+<h4 id="orge1c4066"><span class="section-number-4">16.2.4</span> 注册中心实现</h4>
+</div>
+<div id="outline-container-orgd05f21b" class="outline-4">
+<h4 id="orgd05f21b"><span class="section-number-4">16.2.5</span> hystric实现</h4>
+</div>
+<div id="outline-container-org1ef5d1e" class="outline-4">
+<h4 id="org1ef5d1e"><span class="section-number-4">16.2.6</span> jvm调优及场景</h4>
+</div>
+<div id="outline-container-org567eecb" class="outline-4">
+<h4 id="org567eecb"><span class="section-number-4">16.2.7</span> sharding-jdbc的实现</h4>
+</div>
+<div id="outline-container-org3bd6050" class="outline-4">
+<h4 id="org3bd6050"><span class="section-number-4">16.2.8</span> postprocessor使用</h4>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: zzy</p>
+<p class="date">Created: 2021-06-16 Wed 15:31</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
